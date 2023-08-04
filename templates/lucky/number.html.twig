@@ -1,0 +1,18 @@
+
+{# templates/lucky/number.html.twig #}
+{{ include('header/header.html.twig') }}
+
+{% block body %}
+
+<h1>Your Lucky number is: {{number}}</h1>
+
+
+    <form action="{{ path('app_logout') }}" method="post">
+        <label for="username">Salir:</label>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        <button type="submit">login</button>
+    </form>
+
+
+{% endblock %}
